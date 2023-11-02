@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.2/materia/bootstrap.min.css" integrity="sha512-4+PCWoNUxEeasuW2ipP8Avsr7X/oS61Kz2CLdwS6ZfHt7jLuzAAcIfPlWLg4aGaDNo0GSmTOmM9biaqnmo6P7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>WebSocket Client</h1>
+    
+            <div class="section">
+                <div class="status col-sm-4">
+                    <span class="dot"></span>
+                    <h4 id="stateLabel">Ready to connect</h4>
+                </div>
+
+                <form>
+                    <div class="form-group mt-2 row">
+                        <label id="connIDLabel" for="connIDHidden" class="col-sm-6 col-form-label">ConnID: N/A</label>    
+                        <div class="col-sm-10">
+                            <input class="rounded" id="connIDHidden"  type="hidden" />
+                        </div>
+                </div>
+                <div class="form-group mt-2 row">
+                    <label for="connectionUrl" class="col-sm-2 col-form-label">Server URL:</label>
+                    <div class="col-sm-10">
+                        <input class="rounded" id="connectionUrl" />    
+                        <button type="button" class="btn btn-primary" id="connectButton" type="submit">Connect</button>
+                        <button type="button" class="btn btn-primary" id="closeButton" disabled>Close Socket</button>
+                    </div>
+                </div>
+        
+                <div class="form-group mt-2 row">
+                    <label for="sendMessage" class="col-sm-2 col-form-label">Message:</label>
+                    <div class="col-sm-10">
+                        <input class="rounded" id="sendMessage" disabled />
+                        <button type="button" class="btn btn-primary" id="sendButton" type="submit" disabled>Send</button>
+                    </div>
+                </div>
+        
+                <div class="form-group mt-2 row">
+                    <label for="recipients" class="col-sm-2 col-form-label">Recipient IDs:</label>
+                    <div class="col-sm-10">
+                        <input class="rounded" id="recipients" disabled />
+                    </div>   
+                </div>   
+        
+                </form>
+            </div>
+        
+            <div class="section">
+                <h4>Communication Log</h4>
+
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">From</th>
+                        <th scope="col">To</th>
+                        <th scope="col">Data</th>
+                      </tr>
+                    </thead>
+                    <tbody id="commsLog">
+                    </tbody>
+                  </table>
+            </div>
+    </div>
+</body>
+
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
