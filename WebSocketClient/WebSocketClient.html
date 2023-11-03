@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.2/materia/bootstrap.min.css" integrity="sha512-4+PCWoNUxEeasuW2ipP8Avsr7X/oS61Kz2CLdwS6ZfHt7jLuzAAcIfPlWLg4aGaDNo0GSmTOmM9biaqnmo6P7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.2/slate/bootstrap.min.css" integrity="sha512-x34e+5aPlXi6mZVzBWkJ9sFqBhZuZw6yvWE/Mf//BsZPCk/UHLOmXfxslhX6dcqlQ2tPZi5XWhe763lNVh1Q/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -11,8 +11,8 @@
         <h2>WebSocket Client</h1>
     
             <div class="section">
-                <div class="status col-sm-4">
-                    <span class="dot"></span>
+                <div class="status col-sm-5">
+                    <span id="visualStatus" class="dot yellow"></span>
                     <h4 id="stateLabel">Ready to connect</h4>
                 </div>
 
@@ -20,30 +20,30 @@
                     <div class="form-group mt-2 row">
                         <label id="connIDLabel" for="connIDHidden" class="col-sm-6 col-form-label">ConnID: N/A</label>    
                         <div class="col-sm-10">
-                            <input class="rounded" id="connIDHidden"  type="hidden" />
+                            <input class="rounded px-2 py-1" id="connIDHidden"  type="hidden" />
                         </div>
                 </div>
                 <div class="form-group mt-2 row">
                     <label for="connectionUrl" class="col-sm-2 col-form-label">Server URL:</label>
                     <div class="col-sm-10">
-                        <input class="rounded" id="connectionUrl" />    
-                        <button type="button" class="btn btn-primary" id="connectButton" type="submit">Connect</button>
-                        <button type="button" class="btn btn-primary" id="closeButton" disabled>Close Socket</button>
+                        <input class="rounded px-2 py-1" id="connectionUrl" />    
+                        <button type="button" class="btn btn-info" id="connectButton" type="submit">Connect</button>
+                        <button type="button" class="btn btn-info" id="closeButton" disabled>Close Socket</button>
                     </div>
                 </div>
         
                 <div class="form-group mt-2 row">
                     <label for="sendMessage" class="col-sm-2 col-form-label">Message:</label>
                     <div class="col-sm-10">
-                        <input class="rounded" id="sendMessage" disabled />
-                        <button type="button" class="btn btn-primary" id="sendButton" type="submit" disabled>Send</button>
+                        <input class="rounded px-2 py-1" id="sendMessage" disabled />
+                        <button type="button" class="btn btn-info" id="sendButton" type="submit" disabled>Send</button>
                     </div>
                 </div>
         
                 <div class="form-group mt-2 row">
                     <label for="recipients" class="col-sm-2 col-form-label">Recipient IDs:</label>
                     <div class="col-sm-10">
-                        <input class="rounded" id="recipients" disabled />
+                        <input class="rounded px-2 py-1" id="recipients" disabled />
                     </div>   
                 </div>   
         
